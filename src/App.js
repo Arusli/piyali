@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Navbar from './Navbar.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// use state to determine which nav item is selected.
+// then conditionally render correct component
+
+const App = () => {
+
+    const [work, setWork] = useState(true);
+    const [about, setAbout] = useState(false);
+
+    return (
+        <div>
+            <Navbar 
+            work={work}
+            about={about}
+            setWork={setWork}
+            setAbout={setAbout}
+            ></Navbar>
+            { work ? (<div>Work Content</div>) : (<div>About Content</div>) }
+        </div>
+    )
+
 }
 
 export default App;
