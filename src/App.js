@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from './Navbar.js';
+import About from './About.js';
+import Work from './Work.js';
 
 // use state to determine which nav item is selected.
 // then conditionally render correct component
@@ -17,7 +19,7 @@ const App = () => {
             setWork={setWork}
             setAbout={setAbout}
             ></Navbar>
-            { work ? (<div>Work Content</div>) : (<div>About Content</div>) }
+            { work ? <Work /> : <About /> }
         </div>
     )
 

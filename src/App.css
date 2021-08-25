@@ -6,3 +6,14 @@ li:hover {
     color: purple;
     font-weight: bold;
 }
+
+.grid-container-about {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-item-b {
+ grid-column-start: 1;
+ grid-column-end: 5;   
+}
