@@ -16,10 +16,10 @@ const Navbar = ({work, about, setWork, setAbout}) => {
 
     return (
         <div>
-            <ul class='flex-row'>
+            <ul className='flex-row'>
                 <li>Piyali Sircar | Designer</li>
-                <li class='pointer' onClick={onWorkClick}>Work</li>
-                <li class='pointer' onClick={onAboutClick}>About</li>
+                <li className='pointer' onClick={onWorkClick}>Work</li>
+                <li className='pointer' onClick={onAboutClick}>About</li>
             </ul>
         </div>
     );
