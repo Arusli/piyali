@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Project from './Project.js';
 
 //2 states, Index state and Project State
 //Need way to conditionally render the selected project. Should be self generating I think. 
@@ -21,7 +22,7 @@ const Work = () => {
             <div>
                 <div class='grid-container-work'>
                     <div class='aspect-square pointer'>
-                        <div class='canvas center'>
+                        <div class='canvas center' onClick={onViewChange}>
                             Project 1
                         </div>
                     </div>
@@ -55,7 +56,7 @@ const Work = () => {
             </div>
         )
     } else {
-        return null;
+        return <Project />;
     }
     
 

@@ -2,13 +2,17 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: sans-serif;
 }
 
 ul {
+    padding: 3rem;
+}
+
+.flex-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 3rem;
 }
 
 li {
@@ -84,4 +88,24 @@ li:hover {
 
 .wrapper {
     margin: 2rem;
+}
+
+
+/* PROJECT */
+.grid-container-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 3rem;
+}
+
+.project-images {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: pink;
+}
+
+.project-description {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: pink;
 }
