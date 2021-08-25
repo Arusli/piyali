@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div>
            <div class='grid-container-about'>
-                <div class='grid-item-a'>Image</div>
+                <div class='grid-item-a'></div>
                 <div class='grid-item-b'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet dui id enim pretium mollis. Fusce porta dapibus ex id suscipit. Vestibulum vel aliquet metus. Nam nec viverra dolor. Quisque et neque at tortor posuere rhoncus et a ante. Donec a ex eu nisi rhoncus feugiat. Nulla nec nunc lacus. Aenean molestie aliquet pellentesque.
                 <br/>

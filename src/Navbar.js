@@ -18,8 +18,8 @@ const Navbar = ({work, about, setWork, setAbout}) => {
         <div>
             <h1>Piyali Sircar | Designer</h1>
             <ul>
-                <li style={{cursor: 'pointer'}} onClick={onWorkClick}>Work</li>
-                <li style={{cursor: 'pointer'}} onClick={onAboutClick}>About</li>
+                <li class='pointer' onClick={onWorkClick}>Work</li>
+                <li class='pointer' onClick={onAboutClick}>About</li>
             </ul>
         </div>
     );

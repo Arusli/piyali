@@ -10,10 +10,13 @@ const Work = () => {
 
     return (
         <div>
-            <div class='grid-container'>
-                <div class='grid-item'>Project 1</div>
-                <div class='grid-item'>Project 2</div>
-                <div class='grid-item'>Project 3</div>
+            <div class='grid-container-work'>
+                <div class='project-square pointer'>Project 1</div>
+                <div class='project-square pointer'>Project 2</div>
+                <div class='project-square pointer'>Project 3</div>
+                <div class='project-square pointer'>Project 4</div>
+                <div class='project-square pointer'>Project 5</div>
+                <div class='project-square pointer'>Project 6</div>
             </div>
         </div>
     )

@@ -13,6 +13,36 @@ li:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.grid-container-work {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.project-square {
+    background-color: purple;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item-a {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5c3aa4c196e76fd46e68642e/1547353759498-O7ZB3AKO5EIGME02V619/IMG_8583_gaussian.jpg?format=500w');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+}
 .grid-item-b {
  grid-column-start: 1;
  grid-column-end: 5;   
