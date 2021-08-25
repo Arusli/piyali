@@ -1,5 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3rem;
+}
+
 li {
     font-size: 2rem;
+    list-style-type: none;
+    list-style-position: outside;
 }
 
 li:hover {
@@ -7,6 +22,7 @@ li:hover {
 }
 
 .grid-container-about {
+    max-width: 1300px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -15,6 +31,7 @@ li:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
+    margin: 3rem;
 }
 
 /* padding top 100% to preserve 1:1 aspect ratio */
@@ -57,7 +74,14 @@ li:hover {
     background-position: center;
 }
 
-.grid-item-b {
- grid-column-start: 1;
- grid-column-end: 5;   
+.biography {
+ font-size: 1.5rem;
+ margin-top: 3vw;
+ padding-bottom: 10vw;
+ border-bottom: solid 1px lightgrey;
+ max-width: 1300px;
+}
+
+.wrapper {
+    margin: 2rem;
 }

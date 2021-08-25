@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 //2 states, Index state and Project State
 //Need way to conditionally render the selected project. Should be self generating I think. 
@@ -8,43 +8,56 @@ import React from 'react';
 
 const Work = () => {
 
-    return (
-        <div>
-            <div class='grid-container-work'>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 1
+    const [overview, setOverview] = useState(true);
+    const [innerview, setInnerview] = useState(false);
+
+    const onViewChange = () => {
+        setOverview(false);
+        setInnerview(true);
+    }
+
+    if (overview) {
+        return (
+            <div>
+                <div class='grid-container-work'>
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 1
+                        </div>
                     </div>
-                </div>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 2
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 2
+                        </div>
                     </div>
-                </div>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 3
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 3
+                        </div>
                     </div>
-                </div>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 4
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 4
+                        </div>
                     </div>
-                </div>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 5
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 5
+                        </div>
                     </div>
-                </div>
-                <div class='aspect-square pointer'>
-                    <div class='canvas center'>
-                        Project 6
+                    <div class='aspect-square pointer'>
+                        <div class='canvas center'>
+                            Project 6
+                        </div>
                     </div>
+                    
                 </div>
-                
             </div>
-        </div>
-    )
+        )
+    } else {
+        return null;
+    }
+    
 
 }
 

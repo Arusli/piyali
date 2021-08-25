@@ -16,8 +16,8 @@ const Navbar = ({work, about, setWork, setAbout}) => {
 
     return (
         <div>
-            <h1>Piyali Sircar | Designer</h1>
             <ul>
+                <li>Piyali Sircar | Designer</li>
                 <li class='pointer' onClick={onWorkClick}>Work</li>
                 <li class='pointer' onClick={onAboutClick}>About</li>
             </ul>
