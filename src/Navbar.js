@@ -1,15 +1,36 @@
 import React from 'react';
 
-const Navbar = ({work, about, setWork, setAbout}) => {
+const Navbar = (
+    {work, 
+    about, 
+    setWork, 
+    setAbout,
+    overview,
+    setOverview,
+    innerview,
+    setInnerview,
+    onViewChange
+    }) => {
     
     const onWorkClick = () => {
-        setWork(true);
-        setAbout(false);
+        if (innerview) {
+            setWork(true);
+            setAbout(false);
+            onViewChange();
+        }
+
+        if (overview) {
+            setWork(true);
+            setAbout(false);
+        }
+
     };
 
     const onAboutClick = () => {
         setAbout(true);
         setWork(false);
+        setInnerview(false);
+        setOverview(true);
     }
 
     console.log(`work state is ${work}`)

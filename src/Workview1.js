@@ -7,51 +7,35 @@ import Workview2 from './Workview2.js';
 //might need to use .map method to create all the project listings with correlating onClick functions/array/objects.
 //Basically, all text and images (all content) should be organized as an array of objects before entering html.
 
-const Work = () => {
+const Work = (
+    {projectsObject, 
+    overview, 
+    setOverview, 
+    innerview, 
+    setInnerview, 
+    onViewChange}) => {
 
-    const [overview, setOverview] = useState(true);
-    const [innerview, setInnerview] = useState(false);
+        console.log(projectsObject);
 
-    const onViewChange = () => {
-        setOverview(false);
-        setInnerview(true);
-    }
+        // How do I do this?
+        //https://stackoverflow.com/questions/44561037/loop-in-return-statement-of-a-component-in-react-js
+        // problem: cannot map an object, only an array.
+        //maybe use object.keys somehow or something to separate out this object. 
+        const array = projectsObject.map( item => {
+            return (
+                <div className='aspect-square pointer'>
+                    <div className='canvas center' onClick={onViewChange}>
+                        Project
+                    </div>
+                </div>
+            )
+        });
 
-    if (overview) {
+        if (overview) {        
         return (
             <div>
                 <div className='grid-container-work'>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center' onClick={onViewChange}>
-                            Project 1
-                        </div>
-                    </div>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center'>
-                            Project 2
-                        </div>
-                    </div>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center'>
-                            Project 3
-                        </div>
-                    </div>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center'>
-                            Project 4
-                        </div>
-                    </div>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center'>
-                            Project 5
-                        </div>
-                    </div>
-                    <div className='aspect-square pointer'>
-                        <div className='canvas center'>
-                            Project 6
-                        </div>
-                    </div>
-                    
+                    {array}                   
                 </div>
             </div>
         )
@@ -63,3 +47,47 @@ const Work = () => {
 }
 
 export default Work;
+
+
+//
+// if (overview) {        
+//     return (
+//         <div>
+//             <div className='grid-container-work'>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center' onClick={onViewChange}>
+//                         Project 1
+//                     </div>
+//                 </div>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center'>
+//                         Project 2
+//                     </div>
+//                 </div>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center'>
+//                         Project 3
+//                     </div>
+//                 </div>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center'>
+//                         Project 4
+//                     </div>
+//                 </div>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center'>
+//                         Project 5
+//                     </div>
+//                 </div>
+//                 <div className='aspect-square pointer'>
+//                     <div className='canvas center'>
+//                         Project 6
+//                     </div>
+//                 </div>
+                
+//             </div>
+//         </div>
+//     )
+// } else {
+//     return <Workview2 />;
+// }
