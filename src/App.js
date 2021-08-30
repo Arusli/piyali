@@ -53,7 +53,7 @@ const App = () => {
             />
             { work ? 
             <Workview1 
-                projectsObject={projectsArray} 
+                projectsArray={projectsArray} 
                 overview={overview}
                 setOverview={setOverview}
                 innerview={innerview}

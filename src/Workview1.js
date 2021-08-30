@@ -8,24 +8,24 @@ import Workview2 from './Workview2.js';
 //Basically, all text and images (all content) should be organized as an array of objects before entering html.
 
 const Work = (
-    {projectsObject, 
+    {projectsArray, 
     overview, 
     setOverview, 
     innerview, 
     setInnerview, 
     onViewChange}) => {
 
-        console.log(projectsObject);
+        console.log(projectsArray);
 
         // How do I do this?
         //https://stackoverflow.com/questions/44561037/loop-in-return-statement-of-a-component-in-react-js
         // problem: cannot map an object, only an array.
         //maybe use object.keys somehow or something to separate out this object. 
-        const array = projectsObject.map( item => {
+        const array = projectsArray.map( item => {
             return (
                 <div className='aspect-square pointer'>
                     <div className='canvas center' onClick={onViewChange}>
-                        Project
+                        {item.title}
                     </div>
                 </div>
             )
@@ -40,7 +40,7 @@ const Work = (
             </div>
         )
     } else {
-        return <Workview2 />;
+        return <Workview2 projectsArray={projectsArray} />;
     }
     
 
