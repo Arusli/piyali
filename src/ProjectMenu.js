@@ -3,7 +3,7 @@ import React from 'react';
 //I think this navbar links should come pre-loaded with props which will be used to generate the project page. 
 //But where should the <project page> be inserted?
 
-const Navbar2 = ({projectsArray}) => {
+const ProjectMenu = ({projectsArray}) => {
     
     const array = projectsArray.map( item => {
             return (
@@ -20,4 +20,4 @@ const Navbar2 = ({projectsArray}) => {
     )
 };
 
-export default Navbar2
+export default ProjectMenu

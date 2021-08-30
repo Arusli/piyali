@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Project = ({projectsArray}) => {
+const Project = ({projectsArray, selectedProject}) => {
     return (
             <div className='grid-container-project'>
                 <div className='project-images'>
                     <div className='flex-column'>
-                        <div className='aspect-square project-pic'></div>
+                        <div style={{backgroundImage: `url(${projectsArray[selectedProject].images[0]})`}}className='aspect-square project-pic'></div>
                         <div className='aspect-square project-pic'></div>
                     </div>
                 </div>
                 <div className='project-description'>
-                        {projectsArray[0].text}
+                        {projectsArray[selectedProject].text}
                 </div>
             </div>
     );

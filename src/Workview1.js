@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectSquare from './ProjectSquare.js';
 
 //2 states, Index state and Project State
 //Need way to conditionally render the selected project. Should be self generating I think. 
@@ -6,7 +7,7 @@ import React from 'react';
 //might need to use .map method to create all the project listings with correlating onClick functions/array/objects.
 //Basically, all text and images (all content) should be organized as an array of objects before entering html.
 
-const Work = (
+const Workview1 = (
     {projectsArray, 
     overview, 
     setOverview, 
@@ -20,13 +21,25 @@ const Work = (
         //https://stackoverflow.com/questions/44561037/loop-in-return-statement-of-a-component-in-react-js
         // problem: cannot map an object, only an array.
         //maybe use object.keys somehow or something to separate out this object. 
+        // const array = projectsArray.map( item => {
+        //     return (
+        //         <div className='aspect-square pointer'>
+        //             <div className='canvas center' onClick={onViewChange}>
+        //                 {item.title}
+        //             </div>
+        //         </div>
+        //     )
+        // });
+
+        const id = 0;
+
         const array = projectsArray.map( item => {
             return (
-                <div className='aspect-square pointer'>
-                    <div className='canvas center' onClick={onViewChange}>
-                        {item.title}
-                    </div>
-                </div>
+                <ProjectSquare 
+                    projectsArray={projectsArray} 
+                    onViewChange={onViewChange}  
+                    id={item.id}
+                />
             )
         });
 
@@ -41,7 +54,7 @@ const Work = (
     } 
 }
 
-export default Work;
+export default Workview1;
 
 
 //
