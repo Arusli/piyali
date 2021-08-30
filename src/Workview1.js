@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import Workview2 from './Workview2.js';
+import React from 'react';
 
 //2 states, Index state and Project State
 //Need way to conditionally render the selected project. Should be self generating I think. 

@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import Navbar from './Navbar.js';
 import About from './About.js';
 import Workview1 from './Workview1.js';
-import Workview2 from './Workview2.js';
 import Project from './Project.js';
+import Navbar2 from './Navbar2.js';
 
 // use state to determine which nav item is selected.
 // then conditionally render correct component
@@ -64,7 +64,7 @@ const App = () => {
                 setInnerview={setInnerview}
                 onViewChange={onViewChange}
             /> : null }
-            {innerview ? <Workview2 projectsArray={projectsArray} /> : null}
+            {innerview ? <Navbar2 projectsArray={projectsArray} /> : null}
             {aboutview ? <About imageUrl={aboutArray[0]} bio={aboutArray[1]} /> : null }
             {innerview ? <Project /> : null}
         </div>
