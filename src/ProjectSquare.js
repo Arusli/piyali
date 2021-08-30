@@ -2,12 +2,12 @@ import React from 'react';
 
 //setSelectedProject
 
-const ProjectSquare = ({projectsArray, onViewChange, id, setSelectedProject}) => {
+const ProjectSquare = ({projectsArray, switchToInnerView, id, setSelectedProject}) => {
     return (
         <div className='aspect-square pointer'>
             <div className='canvas center' 
             onClick={()=>{
-                onViewChange();
+                switchToInnerView();
                 setSelectedProject(id-1);
             }}
             >

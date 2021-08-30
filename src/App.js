@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Navbar from './Navbar.js';
 import About from './About.js';
-import Workview1 from './Workview1.js';
+import WorkOverview from './WorkOverview.js';
 import Project from './Project.js';
-import ProjectMenu from './ProjectMenu.js';
+import WorkMenu from './WorkMenu.js';
 
 // use state to determine which nav item is selected.
 // then conditionally render correct component
@@ -19,15 +19,11 @@ const App = () => {
     //Put project component in this App component. Move as many components here as can.
     const [selectedProject, setSelectedProject] = useState(0);
 
-    const onViewChange = () => {
+    const switchToInnerView = () => {
         setInnerview(true);
         setOverview(false);
     }
-
-    const onProjectSelect = (num) => {
-        setSelectedProject(num);
-    };
-
+    
     const aboutArray = ['https://images.squarespace-cdn.com/content/v1/5c3aa4c196e76fd46e68642e/1547353759498-O7ZB3AKO5EIGME02V619/IMG_8583_gaussian.jpg?format=500w', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet dui id enim pretium mollis. Fusce porta dapibus ex id suscipit. Vestibulum vel aliquet metus. Nam nec viverra dolor. Quisque et neque at tortor posuere rhoncus et a ante. Donec a ex eu nisi rhoncus feugiat. Nulla nec nunc lacus. Aenean molestie aliquet pellentesque. Suspendisse ac justo dolor. Etiam nec neque in ex varius tincidunt eu nec risus. Vivamus dictum bibendum odio at porttitor. In dolor nisi, scelerisque sed elementum quis, condimentum ut ex. Nunc sit amet lacus eget ipsum posuere ornare. Nulla maximus hendrerit finibus. Vivamus nec neque. Piyali has a Masters in Interaction Design from TU Delft and a Bachelors degree in Bioengineering from the University of Pennsylvania. She is a multidisciplinary designer, comfortable designing across mediums, with a research by design practice.'];
 
     // I believe contentful will deliver content as an array of objects.
@@ -56,19 +52,18 @@ const App = () => {
             setOverview={setOverview}
             innerview={innerview}
             setInnerview={setInnerview}
-            onViewChange={onViewChange}
             />
             { overview ? 
-            <Workview1 
+            <WorkOverview 
                 projectsArray={projectsArray} 
                 overview={overview}
                 setOverview={setOverview}
                 innerview={innerview}
                 setInnerview={setInnerview}
-                onViewChange={onViewChange}
+                switchToInnerView={switchToInnerView}
                 setSelectedProject={setSelectedProject}
             /> : null }
-            {innerview ? <ProjectMenu projectsArray={projectsArray} /> : null}
+            {innerview ? <WorkMenu projectsArray={projectsArray} /> : null}
             {aboutview ? <About imageUrl={aboutArray[0]} bio={aboutArray[1]} /> : null }
             {innerview ? <Project projectsArray={projectsArray} selectedProject={selectedProject} /> : null}
         </div>

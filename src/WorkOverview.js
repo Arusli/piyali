@@ -7,13 +7,13 @@ import ProjectSquare from './ProjectSquare.js';
 //might need to use .map method to create all the project listings with correlating onClick functions/array/objects.
 //Basically, all text and images (all content) should be organized as an array of objects before entering html.
 
-const Workview1 = (
+const WorkOverview = (
     {projectsArray, 
     overview, 
     setOverview, 
     innerview, 
     setInnerview, 
-    onViewChange,
+    switchToInnerView,
     setSelectedProject
     }) => {
 
@@ -39,7 +39,7 @@ const Workview1 = (
             return (
                 <ProjectSquare 
                     projectsArray={projectsArray} 
-                    onViewChange={onViewChange}  
+                    switchToInnerView={switchToInnerView}  
                     id={item.id}
                     setSelectedProject={setSelectedProject}
                 />
@@ -57,7 +57,7 @@ const Workview1 = (
     } 
 }
 
-export default Workview1;
+export default WorkOverview;
 
 
 //

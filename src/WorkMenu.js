@@ -5,7 +5,7 @@ import React from 'react';
 
 
 //need to add projectMenuItem component, identicla to ProjectSquare component **
-const ProjectMenu = ({projectsArray}) => {
+const WorkMenu = ({projectsArray}) => {
     
     const array = projectsArray.map( item => {
             return (
@@ -22,4 +22,4 @@ const ProjectMenu = ({projectsArray}) => {
     )
 };
 
-export default ProjectMenu
+export default WorkMenu

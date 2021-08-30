@@ -7,7 +7,6 @@ const Navbar = (
     setOverview,
     innerview,
     setInnerview,
-    onViewChange
     }) => {
     
     const onWorkClick = () => {
