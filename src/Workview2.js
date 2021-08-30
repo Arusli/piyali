@@ -7,7 +7,6 @@ const Workview2 = ({projectsArray}) => {
     return (
         <div>
             <Navbar2 projectsArray={projectsArray} />
-            <Project />
         </div>
     )
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 
 const Navbar = (
-    {work, 
-    about, 
-    setWork, 
-    setAbout,
+    {aboutview, 
+    setAboutview,
     overview,
     setOverview,
     innerview,
@@ -13,27 +11,31 @@ const Navbar = (
     }) => {
     
     const onWorkClick = () => {
-        if (innerview) {
-            setWork(true);
-            setAbout(false);
-            onViewChange();
-        }
+       setAboutview(false);
+       setOverview(true);
+       setInnerview(false);
+       
+        // if (innerview) {
+        //     // setWork(true);
+        //     setAboutview(false);
+        //     onViewChange();
+        // }
 
-        if (overview) {
-            setWork(true);
-            setAbout(false);
-        }
+        // if (overview) {
+        //     // setWork(true);
+        //     setAboutview(false);
+        // }
 
     };
 
     const onAboutClick = () => {
-        setAbout(true);
-        setWork(false);
+        setAboutview(true);
+        // setWork(false);
         setInnerview(false);
-        setOverview(true);
+        setOverview(false);
     }
 
-    console.log(`work state is ${work}`)
+    // console.log(`work state is ${work}`)
 
     return (
         <div>

@@ -39,11 +39,7 @@ const Work = (
                 </div>
             </div>
         )
-    } else {
-        return <Workview2 projectsArray={projectsArray} />;
-    }
-    
-
+    } 
 }
 
 export default Work;
