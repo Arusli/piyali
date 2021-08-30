@@ -13,7 +13,9 @@ const Workview1 = (
     setOverview, 
     innerview, 
     setInnerview, 
-    onViewChange}) => {
+    onViewChange,
+    setSelectedProject
+    }) => {
 
         console.log(projectsArray);
 
@@ -39,6 +41,7 @@ const Workview1 = (
                     projectsArray={projectsArray} 
                     onViewChange={onViewChange}  
                     id={item.id}
+                    setSelectedProject={setSelectedProject}
                 />
             )
         });

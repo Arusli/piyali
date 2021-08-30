@@ -66,6 +66,7 @@ const App = () => {
                 innerview={innerview}
                 setInnerview={setInnerview}
                 onViewChange={onViewChange}
+                setSelectedProject={setSelectedProject}
             /> : null }
             {innerview ? <ProjectMenu projectsArray={projectsArray} /> : null}
             {aboutview ? <About imageUrl={aboutArray[0]} bio={aboutArray[1]} /> : null }
