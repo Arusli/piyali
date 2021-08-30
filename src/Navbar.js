@@ -14,23 +14,10 @@ const Navbar = (
        setAboutview(false);
        setOverview(true);
        setInnerview(false);
-       
-        // if (innerview) {
-        //     // setWork(true);
-        //     setAboutview(false);
-        //     onViewChange();
-        // }
-
-        // if (overview) {
-        //     // setWork(true);
-        //     setAboutview(false);
-        // }
-
     };
 
     const onAboutClick = () => {
         setAboutview(true);
-        // setWork(false);
         setInnerview(false);
         setOverview(false);
     }
