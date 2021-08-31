@@ -1,15 +1,21 @@
 import React from 'react';
+import WorkMenuItem from './WorkMenuItem.js'
 
 //I think this navbar links should come pre-loaded with props which will be used to generate the project page. 
 //But where should the <project page> be inserted?
 
 
 //need to add projectMenuItem component, identicla to ProjectSquare component **
-const WorkMenu = ({projectsArray}) => {
+const WorkMenu = ({projectsArray, switchToInnerView, setSelectedProject}) => {
     
     const array = projectsArray.map( item => {
             return (
-                <li>{item.title}</li>
+                <WorkMenuItem 
+                projectsArray={projectsArray} 
+                switchToInnerView={switchToInnerView} 
+                id={item.id} 
+                setSelectedProject={setSelectedProject}
+                />
             )
         });
     
@@ -22,4 +28,4 @@ const WorkMenu = ({projectsArray}) => {
     )
 };
 
-export default WorkMenu
+export default WorkMenu;

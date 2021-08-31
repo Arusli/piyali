@@ -33,8 +33,6 @@ const WorkOverview = (
         //     )
         // });
 
-        const id = 0;
-
         const array = projectsArray.map( item => {
             return (
                 <ProjectSquare 
