@@ -1,12 +1,6 @@
 import React from 'react';
 import ProjectSquare from './ProjectSquare.js';
 
-//2 states, Index state and Project State
-//Need way to conditionally render the selected project. Should be self generating I think. 
-//Generate from an array download from contently?
-//might need to use .map method to create all the project listings with correlating onClick functions/array/objects.
-//Basically, all text and images (all content) should be organized as an array of objects before entering html.
-
 const WorkOverview = (
     {projectsArray, 
     overview, 

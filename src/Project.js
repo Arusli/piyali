@@ -1,12 +1,20 @@
 import React from 'react';
+import ProjectImage from './ProjectImage.js';
 
 const Project = ({projectsArray, selectedProject}) => {
+    let index = -1;
+    const array = projectsArray[selectedProject].images.map( item => {
+        index += 1;
+        return (
+            <ProjectImage projectsArray={projectsArray} selectedProject={selectedProject} index={index} />
+        )
+    });
+
     return (
             <div className='grid-container-project'>
                 <div className='project-images'>
                     <div className='flex-column'>
-                        <div style={{backgroundImage: `url(${projectsArray[selectedProject].images[0]})`}}className='aspect-square project-pic'></div>
-                        <div className='aspect-square project-pic'></div>
+                        {array}
                     </div>
                 </div>
                 <div className='project-description'>
