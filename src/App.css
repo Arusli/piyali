@@ -114,6 +114,8 @@ li:hover {
 }
 
 .project-pic {
-    margin: 1rem;
-    background-color: pink;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    margin-bottom: 2rem;
 }
