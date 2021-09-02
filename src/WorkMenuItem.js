@@ -2,7 +2,7 @@ import React from 'react';
 
 const WorkMenuItem = ({projectsArray, switchToInnerView, id, setSelectedProject}) => {
     return (
-        <li onClick={ () => {
+        <li className='pointer' onClick={ () => {
             setSelectedProject(id-1);
         }}>{projectsArray[id-1].title}</li>
     );
