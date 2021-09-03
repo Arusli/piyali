@@ -1,15 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from './Navbar.js';
 import About from './About.js';
 import WorkOverview from './WorkOverview.js';
 import Project from './Project.js';
 import WorkMenu from './WorkMenu.js';
+import client from './client.js';
+
+
 
 // use state to determine which nav item is selected.
 // then conditionally render correct component
 
 // async receive all content as object from headless cms.
 // distribute content as props to populate appropriate amount of projects/images.
+
 
 const App = () => {
     const [aboutview, setAboutview] = useState(false);
@@ -40,8 +44,23 @@ const App = () => {
             id: 2,
             images: ['https://randomwordgenerator.com/img/picture-generator/tools-1209764_640.jpg', 'https://randomwordgenerator.com/img/picture-generator/tools-1209764_640.jpg', 'https://randomwordgenerator.com/img/picture-generator/53e6dc404d57ad14f1dc8460962e33791c3ad6e04e507749712e79d0954bcc_640.jpg'],
             text: 'This is Project 2 description: consectetur adipiscing elit. Nulla sit amet dui id enim pretium mollis. Fusce porta dapibus ex id suscipit. Vestibulum vel aliquet metus. Nam nec viverra dolor. Quisque et neque at tortor posuere rhoncus et a ante. Donec a ex eu nisi rhoncus feugiat. Nulla nec nunc lacus. Aenean molestie aliquet pellentesque. Suspendisse ac justo dolor. Etiam nec neque in ex varius tincidunt eu nec risus. Vivamus dictum bibendum odio at porttitor. In dolor nisi, scelerisque sed elementum quis, condimentum ut ex. Nunc sit amet lacus eget ipsum posuere ornare. Nulla maximus hendrerit finibus. Vivamus nec neque.'
+        },
+        {
+            title: 'Project 3',
+            id: 3,
+            images: ['https://randomwordgenerator.com/img/picture-generator/54e3d6434953ae14f1dc8460962e33791c3ad6e04e507749772f78d49f4cc6_640.jpg', 'https://randomwordgenerator.com/img/picture-generator/55e7d1414d53af14f1dc8460962e33791c3ad6e04e507440762e7adc9f49c1_640.jpg'],
+            text: 'Project 3 here. Consectetur adipiscing elit. Nulla sit amet dui id enim pretium mollis. Fusce porta dapibus ex id suscipit. Vestibulum vel aliquet metus. Nam nec viverra dolor. Quisque et neque at tortor posuere rhoncus et a ante. Donec a ex eu nisi rhoncus feugiat. Nulla nec nunc lacus. Aenean molestie aliquet pellentesque. Suspendisse ac justo dolor. Etiam nec neque in ex varius tincidunt eu nec risus. Vivamus dictum bibendum odio at porttitor. In dolor nisi, scelerisque sed elementum quis, condimentum ut ex. Nunc sit amet lacus eget ipsum posuere ornare. Nulla maximus hendrerit finibus. Vivamus nec neque. Piyali has a Masters in Interaction Design from TU Delft and a Bachelors degree in Bioengineering from the University of Pennsylvania. She is a multidisciplinary designer, comfortable designing across mediums, with a research by design practice.'
         }
     ];
+
+    //makes call to contentful api
+    useEffect(() => {
+        client.getEntries()
+        .then( (res) => {
+            console.log(res);
+        })
+        .catch(console.error);
+    })
 
     return (
         <div>
