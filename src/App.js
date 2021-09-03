@@ -22,6 +22,7 @@ const App = () => {
     //Use this projectState to create a project component that reacts to the correct state number!
     //Put project component in this App component. Move as many components here as can.
     const [selectedProject, setSelectedProject] = useState(0);
+    const itemsArray = [];
 
     const switchToInnerView = () => {
         setInnerview(true);
@@ -32,6 +33,7 @@ const App = () => {
 
     // I believe contentful will deliver content as an array of objects.
 
+    //TEST ARRAY, pre-contentful
     const projectsArray = [
         {
             title: 'Project 1',
@@ -53,14 +55,22 @@ const App = () => {
         }
     ];
 
+
     //makes call to contentful api
     useEffect(() => {
         client.getEntries()
         .then( (res) => {
-            console.log(res);
+            itemsArray.push(res.items.sort( (a,b) => {
+                return (a.fields.id - b.fields.id)
+            }));
+            // itemsArray.push(...array);
+            console.log(itemsArray);
         })
         .catch(console.error);
-    })
+    }, []);
+
+    //itemsArray fields:
+    //{name, id, images, description}
 
     return (
         <div>
