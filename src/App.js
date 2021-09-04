@@ -60,15 +60,29 @@ const App = () => {
     //makes call to contentful api
     //One problem is that some components load before useEffect finishes, and before the api call is received...
     useEffect(() => {
-        client.getEntries()
-        .then( (res) => {
-            let array = res.items.sort( (a,b) => {
-                return (a.fields.id - b.fields.id)
+
+        async function fetchData() {
+            const res = await client.getEntries();
+            console.log(res);
+            const sortedArray = await res.items.sort( (a,b) => {
+                return a.fields.id - b.fields.id;
             });
-            setItemsArray(array);
-        })
-        .then(console.log('line 68', itemsArray))
-        .catch(console.error);
+            setItemsArray(sortedArray);
+            // console.log('itemsarray', itemsArray); This is not awaiting... How to make it await?
+        };
+
+        fetchData();
+       
+        // client.getEntries()
+        // .then( (res) => {
+        //     let array = res.items.sort( (a,b) => {
+        //         return (a.fields.id - b.fields.id)
+        //     });
+        //     setItemsArray(array);
+        // })
+        // .then(console.log('line 68', itemsArray))
+        // .catch(console.error);
+
     }, []);
 
     //itemsArray fields:

@@ -1,12 +1,12 @@
 import React from 'react';
 import ProjectImage from './ProjectImage.js';
 
-const Project = ({projectsArray, selectedProject}) => {
+const Project = ({itemsArray, selectedProject}) => {
     let index = -1;
-    const array = projectsArray[selectedProject].images.map( item => {
+    const array = itemsArray[selectedProject].fields.images.map( item => {
         index += 1;
         return (
-            <ProjectImage projectsArray={projectsArray} selectedProject={selectedProject} index={index} />
+            <ProjectImage itemsArray={itemsArray} selectedProject={selectedProject} index={index} />
         )
     });
 
@@ -18,7 +18,7 @@ const Project = ({projectsArray, selectedProject}) => {
                     </div>
                 </div>
                 <div className='project-description'>
-                        {projectsArray[selectedProject].text}
+                        {itemsArray[selectedProject].fields.description}
                 </div>
             </div>
     );

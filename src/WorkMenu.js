@@ -6,14 +6,14 @@ import WorkMenuItem from './WorkMenuItem.js'
 
 
 //need to add projectMenuItem component, identicla to ProjectSquare component **
-const WorkMenu = ({projectsArray, switchToInnerView, setSelectedProject}) => {
+const WorkMenu = ({itemsArray, switchToInnerView, setSelectedProject}) => {
     
-    const array = projectsArray.map( item => {
+    const array = itemsArray.map( item => {
             return (
                 <WorkMenuItem 
-                projectsArray={projectsArray} 
+                itemsArray={itemsArray} 
                 switchToInnerView={switchToInnerView} 
-                id={item.id} 
+                id={item.fields.id} 
                 setSelectedProject={setSelectedProject}
                 />
             )

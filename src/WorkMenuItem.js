@@ -1,10 +1,10 @@
 import React from 'react';
 
-const WorkMenuItem = ({projectsArray, switchToInnerView, id, setSelectedProject}) => {
+const WorkMenuItem = ({itemsArray, switchToInnerView, id, setSelectedProject}) => {
     return (
         <li className='pointer' onClick={ () => {
             setSelectedProject(id-1);
-        }}>{projectsArray[id-1].title}</li>
+        }}>{itemsArray[id-1].fields.name}</li>
     );
 };
 
