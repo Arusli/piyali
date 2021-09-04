@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectSquare from './ProjectSquare.js';
 
 const WorkOverview = (
-    {projectsArray, 
+    {itemsArray, 
     overview, 
     setOverview, 
     innerview, 
@@ -11,7 +11,7 @@ const WorkOverview = (
     setSelectedProject
     }) => {
 
-        console.log(projectsArray);
+        console.log('id here here please');
 
         // How do I do this?
         //https://stackoverflow.com/questions/44561037/loop-in-return-statement-of-a-component-in-react-js
@@ -27,12 +27,12 @@ const WorkOverview = (
         //     )
         // });
 
-        const array = projectsArray.map( item => {
+        const array = itemsArray.map( item => {
             return (
                 <ProjectSquare 
-                    projectsArray={projectsArray} 
+                    itemsArray={itemsArray} 
                     switchToInnerView={switchToInnerView}  
-                    id={item.id}
+                    id={item.fields.id}
                     setSelectedProject={setSelectedProject}
                 />
             )

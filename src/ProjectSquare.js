@@ -2,7 +2,7 @@ import React from 'react';
 
 //setSelectedProject
 
-const ProjectSquare = ({projectsArray, switchToInnerView, id, setSelectedProject}) => {
+const ProjectSquare = ({itemsArray, switchToInnerView, id, setSelectedProject}) => {
     return (
         <div className='aspect-square pointer'>
             <div className='canvas center' 
@@ -11,7 +11,7 @@ const ProjectSquare = ({projectsArray, switchToInnerView, id, setSelectedProject
                 setSelectedProject(id-1);
             }}
             >
-                {projectsArray[(id - 1)].title}
+                {itemsArray[(id - 1)].fields.name}
             </div>
         </div>
     );
