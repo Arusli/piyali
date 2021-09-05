@@ -89,7 +89,7 @@ const App = () => {
     //{name, id, images, description}
 
     return (
-        <div>
+        <div className='container'>
             <Navbar 
             aboutview={aboutview}
             setAboutview={setAboutview}

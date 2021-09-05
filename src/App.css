@@ -61,6 +61,11 @@ li:hover {
     background-color: pink;
 }
 
+.container {
+    margin-left: 5vw;
+    margin-righT: 5vw;
+}
+
 .canvas {
     position: absolute;
     top: 0;
@@ -115,6 +120,8 @@ li:hover {
 .project-images {
     grid-column-start: 1;
     grid-column-end: 4;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .project-description {
