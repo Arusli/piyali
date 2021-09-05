@@ -11,7 +11,7 @@ const WorkOverview = (
     setSelectedProject
     }) => {
 
-        console.log('id here here please');
+        console.log('Work Overview Component Renders');
 
         // How do I do this?
         //https://stackoverflow.com/questions/44561037/loop-in-return-statement-of-a-component-in-react-js

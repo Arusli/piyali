@@ -93,19 +93,21 @@ li:hover {
 /* PROJECT */
 .grid-container-project {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 3rem;
     gap: 1rem;
 }
 
 .project-images {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
 }
 
 .project-description {
     grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-end: 6;
+    font-size: 1.1rem;
+    margin-left: 6em;
 }
 
 .flex-column {
