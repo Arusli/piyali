@@ -25,10 +25,10 @@ const Navbar = (
 
     return (
         <div>
-            <ul className='flex-row'>
-                <li>Piyali Sircar | Designer</li>
-                <li className='pointer' onClick={onWorkClick}>Work</li>
-                <li className='pointer' onClick={onAboutClick}>About</li>
+            <ul className='flex-row navbar'>
+                <li className='title'>Piyali Sircar | Designer</li>
+                <li className='pointer navbar-item' onClick={onWorkClick}>Work</li>
+                <li className='pointer navbar-item' onClick={onAboutClick}>About</li>
             </ul>
         </div>
     );

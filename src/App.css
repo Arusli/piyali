@@ -16,13 +16,27 @@ ul {
 }
 
 li {
-    font-size: 2rem;
     list-style-type: none;
     list-style-position: outside;
 }
 
 li:hover {
     color: purple;
+}
+
+.navbar {
+    font-size: 2rem;
+}
+
+.navbar-item {
+}
+
+.work-menu {
+}
+
+.work-menu-item {
+    color: red;
+    font-size: 1.3rem;
 }
 
 .grid-container-about {
@@ -41,10 +55,10 @@ li:hover {
 /* padding top 100% to preserve 1:1 aspect ratio */
 /* position relative to allow absolute position of inner canvas div */
 .aspect-square {
-    border: solid 1px black;
     width: 100%;
     padding-top: 100%;
-    position: relative
+    position: relative;
+    background-color: pink;
 }
 
 .canvas {
@@ -107,7 +121,7 @@ li:hover {
     grid-column-start: 4;
     grid-column-end: 6;
     font-size: 1.1rem;
-    margin-left: 6em;
+    margin-left: 10vw;
 }
 
 .flex-column {

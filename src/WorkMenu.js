@@ -21,7 +21,7 @@ const WorkMenu = ({itemsArray, switchToInnerView, setSelectedProject}) => {
     
     return (
         <div>
-            <ul className='flex-row'>
+            <ul className='flex-row work-menu'>
                 {array}
             </ul>
         </div>
