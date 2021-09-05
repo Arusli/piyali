@@ -58,6 +58,10 @@ li:hover {
     width: 100%;
     padding-top: 100%;
     position: relative;
+    background-color: white;
+}
+
+.project-square {
     background-color: pink;
 }
 
@@ -138,7 +142,8 @@ li:hover {
 
 .project-pic {
     background-size: cover;
-    background-repeat: none;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 2rem;
 }

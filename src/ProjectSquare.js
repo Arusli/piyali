@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProjectSquare = ({itemsArray, switchToInnerView, id, setSelectedProject}) => {
     return (
-        <div className='aspect-square pointer'>
+        <div className='aspect-square pointer project-square'>
             <div className='canvas center' 
             onClick={()=>{
                 switchToInnerView();
