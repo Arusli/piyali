@@ -66,8 +66,8 @@ li:hover {
 }
 
 .container {
-    margin-left: 5vw;
-    margin-righT: 5vw;
+    margin-left: 6vw;
+    margin-righT: 6vw;
 }
 
 .canvas {
@@ -140,10 +140,12 @@ li:hover {
     flex-direction: column;
 }
 
+/* Does piyali know if all her images will be cut to same size? */
 .project-pic {
-    background-size: cover;
-    /* background-size: contain; */
+    /* background-size: cover; */
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 2rem;
+    background-position: center top;
+    height: 30vw;
+    margin-bottom: 3rem;
 }
