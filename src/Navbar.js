@@ -33,7 +33,7 @@ const Navbar = (
             <ul className='flex-row navbar'>
                 <li className='title'>Piyali Sircar | Designer</li>
                 <li className={workActive ? 'pointer navbar-item highlight' : 'pointer navbar-item'} onClick={onWorkClick}>Work</li>
-                <li className={!workActive ? 'pointer navbar-item highlight' : 'pointer navbar-item'} onClick={onAboutClick}>About</li>
+                <li className={workActive ? 'pointer navbar-item' : 'pointer navbar-item highlight'} onClick={onAboutClick}>About</li>
             </ul>
         </div>
     );

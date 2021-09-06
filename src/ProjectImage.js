@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ProjectImage = ({itemsArray, selectedProject, index}) => {
+const ProjectImage = ({itemsArray, selectedProjectIndex, index}) => {
     return (
-        <div style={{backgroundImage: `url(${itemsArray[selectedProject].fields.images[index].fields.file.url})`}} 
+        <div style={{backgroundImage: `url(${itemsArray[selectedProjectIndex].fields.images[index].fields.file.url})`}} 
             className='project-pic'>
         </div>
     );

@@ -6,14 +6,11 @@ import Project from './Project.js';
 import WorkMenu from './WorkMenu.js';
 import client from './client.js';
 
-
-
 // use state to determine which nav item is selected.
 // then conditionally render correct component
 
 // async receive all content as object from headless cms.
 // distribute content as props to populate appropriate amount of projects/images.
-
 
 const App = () => {
     const [aboutview, setAboutview] = useState(false);
@@ -21,8 +18,10 @@ const App = () => {
     const [innerview, setInnerview] = useState(false);
     //Use this projectState to create a project component that reacts to the correct state number!
     //Put project component in this App component. Move as many components here as can.
-    const [selectedProject, setSelectedProject] = useState(0);
+    const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
     const [itemsArray, setItemsArray] = useState([]);
+    const [selectedProjectName, setSelectedProjectName] = useState('');
+
 
     const switchToInnerView = () => {
         setInnerview(true);
@@ -31,6 +30,7 @@ const App = () => {
     
     const aboutArray = ['https://images.squarespace-cdn.com/content/v1/5c3aa4c196e76fd46e68642e/1547353759498-O7ZB3AKO5EIGME02V619/IMG_8583_gaussian.jpg?format=500w', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet dui id enim pretium mollis. Fusce porta dapibus ex id suscipit. Vestibulum vel aliquet metus. Nam nec viverra dolor. Quisque et neque at tortor posuere rhoncus et a ante. Donec a ex eu nisi rhoncus feugiat. Nulla nec nunc lacus. Aenean molestie aliquet pellentesque. Suspendisse ac justo dolor. Etiam nec neque in ex varius tincidunt eu nec risus. Vivamus dictum bibendum odio at porttitor. In dolor nisi, scelerisque sed elementum quis, condimentum ut ex. Nunc sit amet lacus eget ipsum posuere ornare. Nulla maximus hendrerit finibus. Vivamus nec neque. Piyali has a Masters in Interaction Design from TU Delft and a Bachelors degree in Bioengineering from the University of Pennsylvania. She is a multidisciplinary designer, comfortable designing across mediums, with a research by design practice.'];
 
+    console.log('selected index and name', selectedProjectIndex, selectedProjectName)
     // I believe contentful will deliver content as an array of objects.
 
     //TEST ARRAY, pre-contentful
@@ -106,16 +106,25 @@ const App = () => {
                 innerview={innerview}
                 setInnerview={setInnerview}
                 switchToInnerView={switchToInnerView}
-                setSelectedProject={setSelectedProject}
+                setSelectedProjectIndex={setSelectedProjectIndex}
+                setSelectedProjectName={setSelectedProjectName}
+                selectedProjectIndex={selectedProjectIndex}
             /> : null }
             {innerview ? 
             <WorkMenu 
                 itemsArray={itemsArray} 
                 switchToInnerView={switchToInnerView} 
-                setSelectedProject={setSelectedProject} 
+                setSelectedProjectIndex={setSelectedProjectIndex}
+                setSelectedProjectName={setSelectedProjectName} 
+                selectedProjectName={selectedProjectName}
             /> : null}
-            {aboutview ? <About imageUrl={aboutArray[0]} bio={aboutArray[1]} /> : null }
-            {innerview ? <Project itemsArray={itemsArray} selectedProject={selectedProject} /> : null}
+            {aboutview ? <About 
+            imageUrl={aboutArray[0]} 
+            bio={aboutArray[1]} /> : null }
+            {innerview ? <Project 
+            itemsArray={itemsArray} 
+            selectedProjectIndex={selectedProjectIndex} 
+            /> : null}
         </div>
     )
 

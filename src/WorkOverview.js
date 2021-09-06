@@ -8,7 +8,9 @@ const WorkOverview = (
     innerview, 
     setInnerview, 
     switchToInnerView,
-    setSelectedProject
+    setSelectedProjectIndex,
+    setSelectedProjectName,
+    selectedProjectIndex
     }) => {
 
         console.log('Work Overview Component Renders');
@@ -33,7 +35,9 @@ const WorkOverview = (
                     itemsArray={itemsArray} 
                     switchToInnerView={switchToInnerView}  
                     id={item.fields.id}
-                    setSelectedProject={setSelectedProject}
+                    setSelectedProjectIndex={setSelectedProjectIndex}
+                    setSelectedProjectName={setSelectedProjectName}
+                    selectedProjectIndex={selectedProjectIndex}
                 />
             )
         });
