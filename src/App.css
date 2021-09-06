@@ -18,22 +18,26 @@ ul {
 li {
     list-style-type: none;
     list-style-position: outside;
-    padding: 5px;
 }
 
 li:hover {
     color: purple;
 }
 
-.highlight {
-    background-color: lime;
+.highlight-1 {
+    background-color: rgb(194, 247, 194);
+}
+
+.highlight-2 {
+    background-color: rgb(193, 232, 247);
 }
 
 .navbar {
     font-size: 2rem;
 }
 
-.navbar-item {
+.navbar li {
+    padding: 10px;
 }
 
 .work-menu {
@@ -42,6 +46,7 @@ li:hover {
 .work-menu-item {
     color: red;
     font-size: 1.3rem;
+    padding: 10px;
 }
 
 .grid-container-about {

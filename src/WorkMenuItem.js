@@ -12,7 +12,7 @@ const WorkMenuItem = ({
 
         if (itemsArray[id-1].fields.name === selectedProjectName) {
             return (
-                <li className='pointer work-menu-item highlight' onClick={ () => {
+                <li className='pointer work-menu-item highlight-2' onClick={ () => {
                     setSelectedProjectIndex(id-1);
                     setSelectedProjectName(itemsArray[id-1].fields.name);
                 }}>{itemsArray[id-1].fields.name}</li>
