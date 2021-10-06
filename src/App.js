@@ -63,6 +63,7 @@ const App = () => {
 
         async function fetchData() {
             const res = await client.getEntries();
+            //** ERROR - Since I updated Contentful and made an About content model, this entries request now returns the about content model as well which causes errors throughout the program. Need to update if I want to use this react version again.
             console.log(res);
             const sortedArray = await res.items.sort( (a,b) => {
                 return a.fields.id - b.fields.id;
